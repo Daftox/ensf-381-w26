@@ -1,0 +1,64 @@
+.container{  
+    display: flex;
+    flex-direction: row;
+}
+ 
+.item {
+    flex: 1;
+
+    padding: 20px;
+    margin: 5px;
+    background-color: lightblue;
+    border: 1px solid darkblue;
+    text-align: center;
+}
+.item img {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.navbar {
+    display: flex;
+    background-color: #333;
+    padding: 15px;
+}
+
+.nav-item {
+    color: white;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.nav-item a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 15px;
+}
+
+.nav-item a:hover{
+    background-color: #bdbbbb;
+    border-radius: 5px
+}
+
+.dropdown{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    min-width: 75%;
+}
+
+.dropdown div{
+    padding: 10px;
+    color: black;
+    border-bottom: 1px solid #ddd
+}
+
+.nav-item:hover .dropdown{
+    display: block;
+}
