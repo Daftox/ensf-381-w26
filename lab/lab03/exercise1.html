@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lab3 -- Exercise 1</title>
+</head>
+<body>
+<h1>JavaScript Lab Exercise 1</h1>
+<script>
+
+//1.A
+var var_var = 1;
+let let_var = 2;
+const const_var = 10;
+let_var = 3;
+try {
+    const_var = 5;
+} catch (error) {
+    console.log("Error: cannot reassign const");
+}
+
+//1.B
+let string1 = "Hello, World!";
+let string2 = "JavaScript is fun!";
+console.log("String 1 length: " + string1.length);
+console.log("String 1 & 2 concatenated: " + string1.concat(string2));
+let string3 = string2.replace("fun", "awesome");
+console.log("String 3: " + string3);
+
+//1.C
+let name = "Alice"
+let age = 25
+let stringTemplate = `My name is ${name} and I am ${age} years old`
+console.log(stringTemplate)
+
+//1.D
+const students = ["Alice", "Tom", "Charlie"]
+const ages = [19, 21, 20]
+for (let i = 0; i < students.length; i++) {
+let studentInfo = `My name is ${students[i]} and I am ${ages[i]} years old`;
+console.log(studentInfo);
+}
+
+//1.E
+let date = new Date()
+console.log(date.toLocaleDateString("en-US"))
+console.log(date.toLocaleDateString("en-CA"))
+
+let month = date.getMonth()+1
+let year = date.getFullYear()
+console.log(year)
+console.log(month)
+const options = { weekday: "long"};
+let dayName = date.toLocaleDateString("en-CA", options)
+console.log(dayName)
+
+let season = month < 3? "Winter":
+month < 6? "Spring":
+month < 9? "Summer":
+month < 12? "Fall": "Winter";
+console.log("season: " + season)
+
+
+</script>
+</body>
+</html>

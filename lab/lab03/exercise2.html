@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>JavaScript Statements Example</title>
+</head>
+<body>
+  <script>
+//2.A
+/*
+function add(n, m){
+    return n+m;
+}
+function subtract(n, m){
+    return n-m;
+}
+
+
+console.log(add(2, 2))
+console.log(subtract(2, 2))
+
+
+//2.B
+
+function add(n, m = 5){
+    return n+m;
+}
+function subtract(n, m = 5){
+    return n-m;
+}
+
+console.log(add(2, 2))
+console.log(subtract(2, 2))
+console.log(add(2))
+console.log(subtract(2))
+    */
+
+
+//2.C
+const add = (a, b) => {return a + b;} 
+const subtract = (a, b) => { return a - b; }
+const multiply = (a, b) => { return a * b; }
+const divide = (a, b) => { 
+    if (b == 0) return "Division by zero error"
+    else return a / b; 
+}
+
+console.log(add(2,2))
+console.log(subtract(2,2))
+console.log(multiply(2,2))
+console.log(divide(2,2))
+console.log(divide(2,0))
+
+
+//2.D
+function calculator(num1, num2, operation){
+    return operation(num1, num2)
+}
+
+console.log(calculator(2, 2, add))
+console.log(calculator(2, 2, divide))
+
+
+
+  // function greetPerson(name) {
+  //   // Using string template to create a greeting message
+  //   const greeting = `Hello ${name}, welcome to ENSF381!`;
+  //   // Returning the greeting
+  //   return greeting;
+  // }
+     
+  // let message = greetPerson();
+  // console.log(message);
+
+  // let message = greetPerson('Eric');
+
+  // let greetPerson = (name='John') => `Hello ${name}, welcome to ENSF381!`;
+
+  // console.log(message);
+
+  // console.log(message);
+  
+  // message = greetPerson();
+  // console.log(message);
+
+ </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
