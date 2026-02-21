@@ -204,3 +204,45 @@ main.custom-order{
     padding-bottom: 15px;
     margin-top: 10px;
 }
+
+
+/*===================== 5. ORDER SUMMARY ===================== */
+
+main.order-summary{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.order-summary button {
+    background-color: #f28c8c;
+    color: white;
+    font-weight: bold;
+    border-radius: 12px;
+    padding: 8px 14px;
+    border: 0px;
+    cursor: pointer;
+}
+
+.summary-table {
+    border-collapse: collapse;
+    margin: 20px auto;
+    background-color: #fff8ee;
+    max-width: 80%;
+}
+
+.summary-table th, 
+.summary-table td {
+    border: 1px solid black;
+    padding: 10px 15px;
+    text-align: left;
+}
+
+
+.order-summary {
+    text-align: center;
+    align-items: center;
+}
