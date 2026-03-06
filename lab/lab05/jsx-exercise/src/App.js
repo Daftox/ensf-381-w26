@@ -1,5 +1,8 @@
 import logo from "./logo.svg";
 import "./App.css";
+import Controls from "./Controls";
+import Footer from "./Footer";
+import RenderUserList from "./UserList";
 
 function App() {
   return (
@@ -7,7 +10,8 @@ function App() {
       <div>{element}</div>
       <p>React Components</p>
       <p>{currentYear}</p>
-      {MyComponent(isLoggedIn)}
+      {Exercise1(isLoggedIn)}
+      {Exercise2(isLoggedIn)}
     </div>
   );
 }
@@ -18,8 +22,20 @@ const currentYear = new Date().getFullYear();
 
 var isLoggedIn = true;
 
-function MyComponent(isLoggedIn) {
+function Exercise1(isLoggedIn) {
   return isLoggedIn ? <p>Welcome, user!</p> : <p>Please login.</p>;
+}
+
+function Exercise2(isLoggedIn) {
+  if(isLoggedIn){
+    return (
+      <div>
+        <Controls />
+        <RenderUserList />
+        <Footer />
+      </div>
+    );
+  };
 }
 
 export default App;
