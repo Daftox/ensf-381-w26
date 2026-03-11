@@ -126,7 +126,7 @@ footer {
 
 #login_form {
     text-align: center;
-    margin: 0 auto 70px;
+    margin: 0 auto 0px;
 }
 
 #login_form input[type="text"],
@@ -135,7 +135,7 @@ footer {
 }
 
 form button,
-.add_btn {
+.add_btn, .to_signup_btn {
     background-color: #f28c8c;
     color: #ffffff;
     font-weight: bold;
@@ -293,4 +293,27 @@ form button,
     justify-content: center;
     gap: 12px;
     margin-top: 20px;
+}
+
+/*--------- Asg2: 3. Login Page ---------*/
+
+.styled-box {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 12px;
+    font-weight: bold;
+    text-align: center;
+    animation: slideIn 0.3s ease-out;
+}
+
+.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #155724;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #721c24;
 }
