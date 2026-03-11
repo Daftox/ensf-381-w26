@@ -56,5 +56,45 @@
 </html>
 
 <script type="text/javascript">
+const form = document.getElementById("signup_form");
+const msgComp = document.getElementById("message-component");
 
+function getErrors(username, email, password, confirmedPassword) {
+    const errors = [];
+    const userRegex = /^[a-zA-Z][a-zA-Z0-9-_]{2,19}$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.(com|net|io)$/;
+    const passRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()\-_=+[\]{}|;:'",.<>/?`~])[A-Za-z\d!@#$%^&*()\-_=+[\]{}|;:'",.<>/?`~]{8,}$/;
+
+    if (!userRegex.test(username)) errors.push("Username: 3-20 chars (A-Z, 0-9, -, _), starts with a letter, no spaces");
+    if (!emailRegex.test(email)) errors.push("Email: must contain @ and end in .com, .net, or .io).");
+    if (!passRegex.test(password)) errors.push("Password: 8+ chars (minimum uppercase, lowercase, number, specials).");
+    if (password !== confirmedPassword) errors.push("Passwords do not match.");
+
+    return errors;
+}
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    msgComp.innerHTML = "";
+
+    const username = document.getElementById("username").value;
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+    const confirmedPassword = document.getElementById("confirm_password").value;
+
+    const errors = getErrors(username, email, password, confirmedPassword);
+    const box = document.createElement("div");
+
+    if (errors.length > 0) {
+        box.className = "styled-box error";
+        box.innerHTML = errors.join("<br>");
+    } else {
+        box.className = "styled-box success";
+        box.textContent = "Signup successful! Redirecting to login...";
+        setTimeout(() => { window.location.href = "login.html"; }, 2000);
+    }
+    
+    msgComp.appendChild(box);
+});
+</script>
 </script>

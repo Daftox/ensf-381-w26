@@ -15,7 +15,9 @@ main {
     flex: 1;
 }
 
-main section h2 { text-align: center; }
+main section h2 {
+    text-align: center;
+}
 
 header {
     background-color: #f9e2c8;
@@ -32,7 +34,7 @@ header img {
     height: 25px;
 }
 
-#page_header > div {
+#page_header>div {
     margin: 0;
     display: flex;
     align-items: center;
@@ -103,7 +105,8 @@ footer {
     box-sizing: border-box;
 }
 
-.login_main, .signup_main {
+.login_main,
+.signup_main {
     display: flex;
     justify-content: center;
     width: 100%;
@@ -112,7 +115,8 @@ footer {
     padding: 20px;
 }
 
-#login_container, #signup_container{
+#login_container,
+#signup_container {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -136,7 +140,8 @@ footer {
 }
 
 form button,
-.add_btn, .to_signup_btn {
+.add_btn,
+.to_signup_btn {
     background-color: #f28c8c;
     color: #ffffff;
     font-weight: bold;
@@ -276,7 +281,7 @@ form button,
     box-sizing: border-box;
 }
 
-.order_summary_main > table {
+.order_summary_main>table {
     margin: 0 auto;
     border-collapse: collapse;
     border: 1px solid black;
@@ -302,7 +307,6 @@ form button,
     margin-top: 20px;
     padding: 15px;
     border-radius: 12px;
-    font-weight: bold;
     text-align: center;
     animation: slideIn 0.3s ease-out;
 }
@@ -321,7 +325,7 @@ form button,
 
 /*--------- Asg2: 4. Signup Page ---------*/
 
-.signup_btn{
+.signup_btn {
     background-color: #4caf50;
     padding: 10px;
     border-radius: 5px;
@@ -330,7 +334,7 @@ form button,
     color: white;
 }
 
-.signup_btn:hover{
+.signup_btn:hover {
     background-color: #45a049;
     opacity: 1.0f;
 }
