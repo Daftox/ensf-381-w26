@@ -27,9 +27,12 @@
     </nav>
 
     <main class="customize_order_main">
-        
 
-        <form action="order_summary.html">
+        <div id="orderTimerContainer">
+            <h3>Order Time Left: <span id="timerDisplay">10:00</span></h3>
+        </div>
+
+        <form id="customizeForm" action="order_summary.html">
             <div>
                 <img src="img/icecream_banner.jpeg" alt="Banner image for customizing order" id="banner_img">
             </div>
@@ -55,13 +58,21 @@
             <button type="button" name="update_order" value="submit_toppings">Submit Selection</button>
 
             <br>
-            <button type="submit">Finish Order</button>
+
+            <div id="totalPriceContainer">
+                <h3>Total Price: $<span id="totalPrice">6.00</span></h3>
+            </div>
+            <button type="button" id="submitOrderBtn">Finish Order</button>
+
         </form>
     </main>
 
     <footer>
         <p>&copy; 2026 Sweet Scoop Ice Cream.</p>
     </footer>
+
+    <script src="customize.js"></script>
+
 </body>
 
 </html>
