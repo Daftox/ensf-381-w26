@@ -30,29 +30,45 @@ document.addEventListener('DOMContentLoaded', function() {
 
     startTimer();
 
-    const allInputs = document.querySelectorAll('input[type="radio"], input[type="checkbox"]');
-    
+    const typeCup = document.getElementById('type_cup');
+    const typeCone = document.getElementById('type_cone');
+    const toppingInputs = [
+        document.getElementById('topping1'),
+        document.getElementById('topping2'),
+        document.getElementById('topping3')
+    ];
+
     function calculateTotalPrice() {
         let total = BASE_PRICE;
-        const selectedToppings = document.querySelectorAll('input[name^="topping"]:checked');
-        total += selectedToppings.length * TOPPING_PRICE;
+        let toppingsCount = 0;
+
+        toppingInputs.forEach(input => {
+            if (input.checked) {
+                toppingsCount++;
+            }
+        });
+
+        total += toppingsCount * TOPPING_PRICE;
         totalPriceSpan.textContent = total.toFixed(2);
     }
-    
-    allInputs.forEach(input => {
+
+    document.querySelectorAll('input').forEach(input => {
         input.addEventListener('change', calculateTotalPrice);
     });
-    
-    calculateTotalPrice();
-    submitBtn.addEventListener('click', function(event) {
-        const isBaseSelected = document.querySelector('input[name="type"]:checked') !== null;
-        const isToppingSelected = document.querySelectorAll('input[name^="topping"]:checked').length > 0;
+
+    submitBtn.addEventListener('click', function() {
+        const isBaseSelected = typeCup.checked || typeCone.checked;
         
+        let isToppingSelected = false;
+        toppingInputs.forEach(input => {
+            if (input.checked) isToppingSelected = true;
+        });
+
         if (!isBaseSelected || !isToppingSelected) {
             alert('Please select one base flavor and at least one topping before finishing your order.');
             return;
         }
-        
+
         window.location.href = 'order_summary.html';
     });
 });

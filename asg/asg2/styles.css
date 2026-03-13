@@ -128,7 +128,8 @@ footer {
     padding: 20px;
 }
 
-#login_form #signup_form {
+#login_form,
+#signup_form {
     text-align: center;
     margin: 0 auto 0px;
 }
@@ -303,8 +304,14 @@ form button,
 
 /*--------- Asg2: 1-2 ---------*/
 .ice_cream_tile:hover {
-    background-color: #ffffff;
+    background-color: #ffe9c8;
+    border: 20px solid #ffe9c8;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+#cart-section > h2 {
+    text-align: center;
+    padding-top: 15px;
 }
 
 #cart-section {
@@ -314,6 +321,7 @@ form button,
     width: 100%;
     padding: 0;
     box-sizing: border-box;
+    padding-bottom: 20px;
 }
 
 .cart-item {
@@ -339,6 +347,10 @@ form button,
     font-weight: bold;
     flex-shrink: 0;
     margin-left: 20px;
+}
+
+#cart-empty-msg {
+    padding: 20px;
 }
 
 
